@@ -1,0 +1,4 @@
+source /opt/ros/melodic/setup.bash
+cd $HOME/Development/sitebots-controller
+source devel/setup.bash
+cd -
