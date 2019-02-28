@@ -17,6 +17,10 @@ Plugin 'tpope/vim-fugitive'
 "Plugin 'Nopik/vim-nerdtree-direnter'
 Plugin 'kien/ctrlp.vim'
 
+
+"yaml
+Bundle 'chase/vim-ansible-yaml'
+
 "html
 "  isnowfy only compatible with python not python3
 "Plugin 'isnowfy/python-vim-instant-markdown'
@@ -74,8 +78,10 @@ set nu
 
 "------------Start Python PEP 8 stuff----------------
 " Number of spaces that a pre-existing tab is equal to.
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
+au BufRead,BufNewFile *.cpp,*.c,*.cc,*.h,*.hpp set tabstop=2
+au BufRead,BufNewFile *.cpp,*.c,*.cc,*.h,*.hpp set shiftwidth=2
 au BufRead,BufNewFile *py,*pyw set tabstop=4
 
 "spaces for indents
@@ -107,6 +113,7 @@ syntax on
 
 " Keep indentation level from previous line:
 autocmd FileType python set autoindent
+autocmd FileType yaml set autoindent 
 
 " make backspaces more powerfull
 set backspace=indent,eol,start
